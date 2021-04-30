@@ -114,9 +114,11 @@
 
 
     <!-- SCRIPTS -->
+    <script src="{{ mix('js/app.js') }}"></script>
     <script src="/adminlte/plugins/jquery/jquery.min.js"></script>
     <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/adminlte/js/adminlte.min.js"></script>
+    
 
     <!-- @@Stack representa todas las etiquetas scripts que están sobre el -->
     @stack('scripts')

@@ -14,7 +14,15 @@ class TrabajadorController extends Controller
      */
     public function index()
     {
-        //
+        
+        return view('admin.trabajador.index');
+    }
+
+    public function lista_trabajadores()
+    {
+        $trabajadores = trabajador::all();
+
+        return response()->json($trabajadores, 200);
     }
 
     /**
