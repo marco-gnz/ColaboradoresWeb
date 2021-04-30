@@ -10,10 +10,11 @@ class EstadoTrabajadorSeeder extends Seeder
     public function run()
     {
         DB::table('estado_trabajadors')->insert([
+            ['descripcion' =>'HABILITADO'],
+            ['descripcion' =>'DESHABILITADO'],
             ['descripcion' =>'EN VACACIONES'],
             ['descripcion' =>'CON LICENCIA'],
             ['descripcion' =>'EN FUNCIONES'],
-            ['descripcion' =>'DESHABILITADO'],
         ]);
     }
 }
