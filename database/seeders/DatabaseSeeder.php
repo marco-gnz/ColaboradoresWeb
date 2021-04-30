@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Http\Controllers\TipoPagoController;
+use DB;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +15,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        /*DB::statement('SET FOREIGN_KEY_CHECKS=0;');*/
+
+        $this->call([
+            AfpSeeder::class,
+            EstadoTrabajadorSeeder::class,
+            PrevisionSaludSeeder::class,
+            EstadoUsuarioSeeder::class,
+            TipoPagoSeeder::class,
+            TipoContratoSeeder::class,
+            TipoPagoSeeder::class,
+            TipoContratoSeeder::class,
+            RegionSeeder::class,
+            TipoDocumentoSeeder::class,
+        ]);
+
+       /* DB::statement('SET FOREIGN_KEY_CHECKS=1;');*/
     }
 }
